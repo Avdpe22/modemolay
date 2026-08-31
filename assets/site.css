@@ -21,7 +21,7 @@ body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-heig
 img{max-width:100%;display:block}
 a{color:var(--teal-deep);text-underline-offset:2px;text-decoration-thickness:.08em}
 ::selection{background:var(--gold-soft);color:var(--ink)}
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 24px}
 h1,h2,h3,.disp{font-family:var(--disp);text-transform:uppercase;line-height:.95;letter-spacing:.01em}
 .eyebrow{font-family:var(--ui);font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-deep)}
 .tristripe{height:6px;background:linear-gradient(90deg,var(--red) 0 33.4%,var(--paper) 33.4% 66.7%,var(--ink) 66.7% 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
