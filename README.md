@@ -1,8 +1,11 @@
 # Missouri DeMolay — Public Website Prototype
 
 This is a **prototype of the public Missouri DeMolay website** (the recruitment/marketing
-site) — not the member portal/wiki. It's a single static page: `index.html`, no build
+site) — not the member portal/wiki. It's a small set of static HTML pages, no build
 step, no backend, no dependencies beyond two Google Fonts loaded over the network.
+`index.html` is the homepage; the interior pages share `assets/site.css` and
+`assets/site.js`. Every link on the site now resolves to a real page — anything still
+undecided is called out in `BLOCKED-ITEMS.md` and marked `data-gap` in the HTML.
 
 Before this goes anywhere near the public internet, read **`BLOCKED-ITEMS.md`** — it's
 the list of decisions the Executive Officer needs to make first.
@@ -11,10 +14,15 @@ the list of decisions the Executive Officer needs to make first.
 
 | File | Purpose |
 |---|---|
-| `index.html` | The whole site. |
+| `index.html` | Homepage. |
+| `what-is-demolay.html`, `our-beginnings.html`, `our-namesake.html`, `the-program.html`, `notable-demolays.html`, `how-to-join.html` | "The Order" content pages. |
+| `news.html`, `story-*.html` | The Mo Bull News hub and its (placeholder) posts. |
+| `events.html`, `honors.html`, `volunteer.html`, `alumni.html`, `members.html` | Program, honors, and getting-involved pages. |
+| `donate.html`, `membership-inquiry.html`, `youth-protection.html` | Pages that resolve every link but are gated on a decision (see `BLOCKED-ITEMS.md`). |
+| `assets/site.css`, `assets/site.js` | Shared shell (header, footer, buttons, prose layout) and behaviour (mobile menu, gap toggle) for the interior pages. The homepage keeps its own inline CSS/JS. |
 | `robots.txt` | Blocks search engines from indexing the *staging* copy. **Remove or replace before public launch.** |
-| `.nojekyll` | Tells GitHub Pages to serve the file as-is, no Jekyll processing. |
-| `BLOCKED-ITEMS.md` | Decisions needed from the EO before this can go from prototype to real site. |
+| `.nojekyll` | Tells GitHub Pages to serve files as-is, no Jekyll processing. |
+| `BLOCKED-ITEMS.md` | Numbered decisions needed from the EO before this can go from prototype to real site. |
 | `README.md` | This file. |
 
 ## Two review tools built into the prototype
