@@ -240,6 +240,14 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .advisors p{color:#d7eef6;max-width:56ch}
 .advisors .acts{display:flex;gap:12px;flex-wrap:wrap}
 
+/* our friends / partner organizations */
+.friends .section-head p{max-width:54ch}
+.friendgrid{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.friendgrid li{display:flex}
+.friendgrid a{flex:1;display:flex;align-items:center;padding:16px 18px;border:1px solid var(--line);border-left:4px solid var(--gold-soft);border-radius:var(--radius);background:var(--white);font-family:var(--ui);font-weight:600;font-size:14.5px;line-height:1.4;color:var(--ink);text-decoration:none;transition:background .18s ease,border-color .18s ease,transform .18s ease,color .18s ease}
+.friendgrid a:hover{background:#fffdf6;border-left-color:var(--gold);color:var(--teal-deep);transform:translateY(-2px)}
+.friendgrid a::after{content:"↗";margin-left:auto;padding-left:12px;color:var(--teal-deep);font-weight:700}
+
 footer{background:#081525;color:#aebacb;font-family:var(--ui);font-size:14px}
 footer .wrap{padding-top:56px;padding-bottom:34px}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:40px}
@@ -303,7 +311,7 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
 @media (max-width:960px){
   .hero .wrap{grid-template-columns:1fr;align-items:start}
   .hero-side{border-left:0;border-top:1px solid rgba(247,245,239,.2);padding:26px 0 0;display:flex;gap:34px;flex-wrap:wrap}
-  .pillars,.chaplist{grid-template-columns:1fr 1fr}
+  .pillars,.chaplist,.friendgrid{grid-template-columns:1fr 1fr}
   .newsgrid,.join .wrap,.advisors .wrap{grid-template-columns:1fr}
   .brief-col{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:26px}
   .voices,.faq{grid-template-columns:1fr}
@@ -320,7 +328,7 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
   .custom-toggle{bottom:78px}
 }
 @media (max-width:560px){
-  .pillars,.chaplist,.fgrid{grid-template-columns:1fr}
+  .pillars,.chaplist,.fgrid,.friendgrid{grid-template-columns:1fr}
   .brand-logo{height:34px}
   .topbar .wrap{justify-content:center;gap:10px}
   .topbar>.wrap>div:first-child{flex-basis:100%;text-align:center}
@@ -339,7 +347,7 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .btn,.pillar,.pillar::before,.pillar a::after,.voice,.path,.chap,.faq .q,.navlinks a,.mobilenav,.mobilenav-inner,.navtoggle .bars,.navtoggle .bars::before,.navtoggle .bars::after,.mobile-cta,nav.main{transition:none}
+  .btn,.pillar,.pillar::before,.pillar a::after,.voice,.path,.chap,.faq .q,.friendgrid a,.navlinks a,.mobilenav,.mobilenav-inner,.navtoggle .bars,.navtoggle .bars::before,.navtoggle .bars::after,.mobile-cta,nav.main{transition:none}
   .reveal{opacity:1;transform:none;transition:none}
 }
 </style>
@@ -659,6 +667,33 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
   </div>
 </section>
 </main>
+
+<section class="section friends reveal" aria-labelledby="friends-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Partners &amp; Affiliates</p>
+        <h2 id="friends-h">Our Friends</h2>
+      </div>
+      <p>Missouri DeMolay stands alongside these Masonic-family and charitable organizations across Missouri and beyond.</p>
+    </div>
+    <ul class="friendgrid">
+      <li><a href="https://demolay.org/" target="_blank" rel="noopener">DeMolay International</a></li>
+      <li><a href="http://light.foundation/" target="_blank" rel="noopener">Light Foundation</a></li>
+      <li><a href="http://moscottishrite.org/ritecare-centers/" target="_blank" rel="noopener">Rite Care — Scottish Rite Masons — Helping Children Communicate</a></li>
+      <li><a href="http://www.shrinershospitalsforchildren.org/" target="_blank" rel="noopener">Shriners Hospitals for Children</a></li>
+      <li><a href="http://www.srclinic.org" target="_blank" rel="noopener">Walker Scottish Rite Clinic for Children with Speech &amp; Language Disorders — Maryville University</a></li>
+      <li><a href="http://www.momason.org" target="_blank" rel="noopener">Grand Lodge of Missouri Ancient Free &amp; Accepted Masons</a></li>
+      <li><a href="http://moscottishrite.org/" target="_blank" rel="noopener">Scottish Rite Orient of Missouri</a></li>
+      <li><a href="http://www.shrinersinternational.org/" target="_blank" rel="noopener">Shriners International</a></li>
+      <li><a href="https://moyorkrite.org/" target="_blank" rel="noopener">Grand York Rite of Missouri</a></li>
+      <li><a href="http://oesmo.org/" target="_blank" rel="noopener">Grand Chapter of Missouri Order of the Eastern Star</a></li>
+      <li><a href="http://www.mofreemason.com/amaranth/" target="_blank" rel="noopener">Grand Court of Missouri — Order of the Amaranth</a></li>
+      <li><a href="http://moiorg.com/" target="_blank" rel="noopener">Missouri Rainbow for Girls</a></li>
+      <li><a href="http://mojdi.org" target="_blank" rel="noopener">Job's Daughters of Missouri</a></li>
+    </ul>
+  </div>
+</section>
 
 <div class="tristripe" role="presentation"></div>
 <footer>
