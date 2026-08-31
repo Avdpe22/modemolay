@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- PROTOTYPE: keep this off search engines until MO DeMolay approves launch. Remove this tag when going live. See BLOCKED-ITEMS.md #16. -->
+<meta name="robots" content="noindex, nofollow">
+<title>Missouri DeMolay — Where DeMolay Began | Leadership for Young Men Ages 9–21</title>
+<meta name="description" content="DeMolay was founded in Kansas City in 1919. Missouri DeMolay is a youth-led, adult-advised leadership fraternity for young men ages 9–21, with 25 chapters across the state.">
+<link rel="canonical" href="https://www.modemolay.org/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Missouri DeMolay">
+<meta property="og:title" content="Missouri DeMolay — Where DeMolay Began">
+<meta property="og:description" content="Youth-led, adult-advised leadership for young men ages 9–21. Founded in Kansas City, 1919.">
+<meta property="og:url" content="https://www.modemolay.org/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B1D33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<script>
+/* PROTOTYPE REVIEW TOOL: re-apply any saved look-and-feel choices before first paint, so returning reviewers don't see a flash of default styling. Safe to delete along with the panel near the end of <body>. */
+(function(){
+  try{
+    var saved=localStorage.getItem('modemolay-theme-prefs');
+    if(saved){
+      var vars=JSON.parse(saved), root=document.documentElement.style;
+      Object.keys(vars).forEach(function(k){ root.setProperty(k, vars[k]); });
+    }
+  }catch(e){}
+})();
+</script>
+<style>
+:root{
+  --ink:#0B1D33;--paper:#F7F5EF;--white:#fff;--gold:#C9A227;--gold-soft:#E7D290;
+  --teal:#1799BE;--teal-deep:#0F7495;--red:#B22234;--gray:#5A6472;--line:rgba(11,29,51,.14);
+  --disp:"Barlow Condensed",sans-serif;--ui:"Barlow",sans-serif;--serif:"Source Serif 4",serif;
+  --radius:3px;--space-section:80px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:var(--teal-deep)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.disp{font-family:var(--disp);text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+.eyebrow{font-family:var(--ui);font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-deep)}
+.tristripe{height:6px;background:linear-gradient(90deg,var(--red) 0 33.4%,var(--paper) 33.4% 66.7%,var(--ink) 66.7% 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:2px}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--ink);font-family:var(--ui);font-weight:700;padding:12px 20px;z-index:200}
+.skip:focus{left:0}
+
+/* content-gap review mode */
+.gapbar{background:#2b2417;color:#f0e2b8;font-family:var(--ui);font-size:12.5px}
+.gapbar .wrap{display:flex;gap:14px;align-items:center;justify-content:center;padding:8px 24px;flex-wrap:wrap;text-align:center}
+.gapbar button{font-family:var(--ui);font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:#2b2417;border:0;padding:6px 12px;border-radius:3px;cursor:pointer}
+body.show-gaps [data-gap]{outline:2px dashed var(--gold);outline-offset:4px;position:relative;background:rgba(201,162,39,.10)}
+body.show-gaps [data-gap]::after{content:attr(data-gap);position:absolute;top:-11px;left:0;font-family:var(--ui);font-weight:700;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:#2b2417;padding:2px 7px;border-radius:2px;z-index:5;white-space:nowrap}
+
+.topbar{background:var(--ink);color:#cfd8e4;font-family:var(--ui);font-size:12.5px;letter-spacing:.05em}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:8px;padding-bottom:8px;gap:16px;flex-wrap:wrap}
+.topbar a{color:var(--gold-soft);text-decoration:none}
+.topbar a:hover{color:#fff}
+.topbar .links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.sitesearch{display:flex}
+.sitesearch input{font-family:var(--ui);font-size:12.5px;padding:6px 10px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#fff;border-radius:var(--radius) 0 0 var(--radius);width:150px}
+.sitesearch input::placeholder{color:#8a97a8}
+.sitesearch button{font-family:var(--ui);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.14);color:#fff;border:0;padding:0 11px;border-radius:0 var(--radius) var(--radius) 0;cursor:pointer}
+
+nav.main{position:sticky;top:0;z-index:50;background:rgba(247,245,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:13px;padding-bottom:13px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.crest{width:44px;height:44px;flex:none}
+.brand-name{font-family:var(--disp);font-weight:700;font-size:24px;line-height:.9;text-transform:uppercase}
+.brand-name small{display:block;font-family:var(--ui);font-weight:600;font-size:9.5px;letter-spacing:.28em;color:var(--teal-deep)}
+.navlinks{display:flex;gap:26px;font-family:var(--ui);font-weight:600;font-size:14.5px;letter-spacing:.03em}
+.navlinks a{color:var(--ink);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+.navlinks a:hover{border-color:var(--gold)}
+.btn{display:inline-block;font-family:var(--ui);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:12px 22px;border-radius:var(--radius);transition:transform .15s ease,background .15s ease;cursor:pointer;border:0}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:#b8931f;transform:translateY(-1px)}
+.btn-line{border:2px solid var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.btn-line.lt{border-color:#fff;color:#fff}
+.btn-line.lt:hover{background:#fff;color:var(--ink)}
+
+.hero{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.hero::after{content:"1919";position:absolute;right:-2%;bottom:-9%;font-family:var(--disp);font-weight:700;font-size:clamp(180px,34vw,430px);line-height:.8;color:rgba(201,162,39,.09);pointer-events:none;user-select:none}
+.hero .wrap{position:relative;z-index:2;padding-top:84px;padding-bottom:88px;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end}
+.hero h1{font-size:clamp(56px,8.5vw,116px);font-weight:700}
+.hero h1 .em{color:var(--gold)}
+.kicker{font-family:var(--ui);font-weight:700;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:42px;height:2px;background:var(--gold);flex:none}
+.hero p.lede{font-size:19px;max-width:56ch;color:#d8dee8;margin:26px 0 32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-actions .micro{font-family:var(--ui);font-size:12.5px;color:#9fb0c4;flex-basis:100%}
+.hero-side{border-left:1px solid rgba(247,245,239,.2);padding-left:34px}
+.hero-side .fact{margin-bottom:26px}
+.hero-side .fact b{font-family:var(--disp);font-size:44px;font-weight:700;color:var(--gold);display:block;line-height:1}
+.hero-side .fact span{font-family:var(--ui);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#aebacb}
+
+.band{background:var(--teal-deep);color:#fff}
+.band .wrap{display:flex;gap:14px;align-items:center;justify-content:center;padding-top:13px;padding-bottom:13px;font-family:var(--ui);font-weight:600;font-size:14px;letter-spacing:.04em;text-align:center;flex-wrap:wrap}
+.band .star{color:var(--gold-soft)}
+
+.section{padding:var(--space-section) 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.section-head h2{font-size:clamp(36px,5vw,56px);font-weight:700}
+.section-head p{max-width:52ch;color:var(--gray)}
+
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.pillar{background:var(--white);padding:30px 26px 34px;transition:background .2s}
+.pillar:hover{background:#fffdf6}
+.pillar .mark{font-family:var(--disp);font-weight:700;font-size:15px;color:var(--teal-deep);letter-spacing:.1em;margin-bottom:14px}
+.pillar h3{font-size:27px;margin-bottom:12px}
+.pillar p{font-size:15.5px;color:var(--gray);margin-bottom:18px}
+.pillar a{font-family:var(--ui);font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+.pillar a::after{content:" →"}
+
+/* upcoming strip */
+.upnext{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.upnext .wrap{padding:26px 24px;display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.upnext .lbl{font-family:var(--disp);text-transform:uppercase;font-size:22px;color:var(--teal-deep);flex:none}
+.upnext ul{list-style:none;display:flex;gap:28px;flex-wrap:wrap;font-family:var(--ui);font-size:14.5px}
+.upnext li b{display:block;font-family:var(--disp);text-transform:uppercase;font-size:18px}
+.upnext li span{color:var(--gray);font-size:13px}
+
+/* chapter finder */
+.finder{background:var(--ink);color:var(--paper)}
+.finder .eyebrow{color:var(--gold-soft)}
+.finder .section-head p{color:#b9c3d1}
+.finder-controls{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px;align-items:center}
+.finder-controls label{font-family:var(--ui);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#9fb2c6}
+.finder-controls select,.finder-controls input{font-family:var(--ui);font-size:14.5px;padding:10px 12px;border:1px solid rgba(247,245,239,.28);background:rgba(255,255,255,.07);color:#fff;border-radius:var(--radius)}
+.finder-controls option{color:#111}
+.chaplist{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.chap{border:1px solid rgba(247,245,239,.18);border-radius:var(--radius);padding:16px 18px;background:rgba(255,255,255,.03)}
+.chap b{font-family:var(--disp);text-transform:uppercase;font-size:21px;color:var(--gold);display:block;line-height:1.05}
+.chap span{font-family:var(--ui);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9fb2c6}
+.chap em{display:block;font-family:var(--ui);font-style:normal;font-size:13px;color:#cdd7e3;margin-top:6px}
+.chapcount{font-family:var(--ui);font-size:13px;color:#9fb2c6;margin-bottom:14px}
+
+/* families */
+.families{background:var(--white);border-top:1px solid var(--line)}
+.faq{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.faq .q{background:var(--white);padding:26px 26px 30px}
+.faq h3{font-size:24px;margin-bottom:10px;color:var(--ink)}
+.faq p{font-size:15.5px;color:var(--gray)}
+
+/* voices */
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.voice{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--teal);padding:24px;border-radius:var(--radius)}
+.voice p{font-size:16.5px;margin-bottom:14px}
+.voice cite{font-family:var(--ui);font-style:normal;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-deep)}
+
+/* mo bull */
+.mobull{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+.mobull::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(11,29,51,.014) 3px 4px);pointer-events:none}
+.mobull .wrap{padding-top:70px;padding-bottom:78px;position:relative}
+.masthead{border-bottom:4px double var(--ink);padding-bottom:18px;margin-bottom:8px;text-align:center}
+.masthead .over{font-family:var(--ui);font-weight:600;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.masthead h2{font-size:clamp(52px,9vw,104px);font-weight:700;letter-spacing:.02em}
+.masthead h2 .bull{color:var(--teal-deep)}
+.dateline{display:flex;justify-content:space-between;font-family:var(--ui);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);border-bottom:1px solid var(--ink);padding:9px 2px;margin-bottom:32px;flex-wrap:wrap;gap:8px}
+.newsgrid{display:grid;grid-template-columns:1.35fr 1fr;gap:44px}
+.lead-story .tag{display:inline-block;font-family:var(--ui);font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;background:var(--gold);color:var(--ink);padding:4px 10px;margin-bottom:14px}
+.lead-story h3{font-size:clamp(34px,4.4vw,48px);margin-bottom:12px}
+.lead-story .byline{font-family:var(--ui);font-size:13px;color:var(--gray);margin-bottom:14px}
+.lead-story p{margin-bottom:14px}
+.lead-story p.drop::first-letter{font-family:var(--disp);font-size:64px;font-weight:700;float:left;line-height:.8;padding:6px 10px 0 0;color:var(--teal-deep)}
+.brief-col{border-left:1px solid var(--line);padding-left:36px;display:flex;flex-direction:column}
+.brief{padding:18px 0;border-bottom:1px solid var(--line)}
+.brief:first-child{padding-top:0}
+.brief .cat{font-family:var(--ui);font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+.brief h4{font-family:var(--disp);text-transform:uppercase;font-size:22px;line-height:1;margin:6px 0}
+.brief p{font-size:14.5px;color:var(--gray)}
+.brief a{font-family:var(--ui);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.subscribe-box{margin-top:auto;background:var(--ink);color:var(--paper);padding:24px;border-radius:var(--radius)}
+.subscribe-box h4{font-family:var(--disp);text-transform:uppercase;font-size:24px;color:var(--gold);margin-bottom:6px}
+.subscribe-box p{font-size:13.5px;color:#c4cedb;margin-bottom:14px}
+.subscribe-box form{display:flex;gap:8px}
+.subscribe-box input{flex:1;min-width:0;font-family:var(--ui);font-size:14px;padding:11px 12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#fff;border-radius:var(--radius)}
+.subscribe-box input::placeholder{color:#8a97a8}
+.subscribe-box button{font-family:var(--ui);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:var(--ink);padding:0 16px;border-radius:var(--radius);cursor:pointer;border:0}
+.archive-note{margin-top:32px;padding-top:16px;border-top:4px double var(--ink);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-family:var(--ui);font-size:13.5px;color:var(--gray)}
+
+/* join */
+.join .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.join h2{font-size:clamp(40px,5.6vw,62px);margin:10px 0 18px}
+.join h2 .em{color:var(--teal-deep)}
+.join p{color:var(--gray);max-width:52ch;margin-bottom:24px}
+.paths{display:grid;gap:14px}
+.path{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--gold);padding:18px 20px;border-radius:var(--radius)}
+.path b{font-family:var(--disp);text-transform:uppercase;font-size:21px;display:block}
+.path span{font-family:var(--ui);font-size:14px;color:var(--gray)}
+
+/* advisors */
+.advisors{background:var(--teal-deep);color:#fff}
+.advisors .wrap{padding:56px 24px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+.advisors h2{font-size:clamp(32px,4.4vw,46px);margin-bottom:12px}
+.advisors p{color:#d7eef6;max-width:56ch}
+.advisors .acts{display:flex;gap:12px;flex-wrap:wrap}
+
+footer{background:#081525;color:#aebacb;font-family:var(--ui);font-size:14px}
+footer .wrap{padding-top:56px;padding-bottom:34px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:40px}
+.fgrid h4{font-family:var(--disp);text-transform:uppercase;font-size:18px;color:var(--paper);margin-bottom:14px;letter-spacing:.04em}
+.fgrid a{color:#aebacb;text-decoration:none;display:block;line-height:2.1}
+.fgrid a:hover{color:var(--gold-soft)}
+.allegiance{font-size:12.5px;line-height:1.7;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;color:#7f8ca0}
+.allegiance b{color:#cfd8e4}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ============================================================
+   PROTOTYPE REVIEW TOOL — appearance customizer
+   Lets a reviewer try color / type / shape / spacing options live.
+   Persists per-browser via localStorage; nothing here is published
+   anywhere. Delete this block, the matching <body> markup near the
+   end of the file, and its <script>, before public launch — or gate
+   it behind an internal-only build flag. See BLOCKED-ITEMS.md #17.
+   ============================================================ */
+.custom-toggle{position:fixed;right:22px;bottom:22px;z-index:120;font-family:var(--ui);font-weight:700;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:var(--ink);border:0;padding:13px 18px;border-radius:999px;box-shadow:0 6px 18px rgba(11,29,51,.28);cursor:pointer;display:flex;align-items:center;gap:8px}
+.custom-toggle:hover{background:#b8931f}
+.custom-panel{position:fixed;top:0;right:0;height:100%;width:320px;max-width:88vw;background:var(--ink);color:var(--paper);z-index:130;transform:translateX(100%);transition:transform .28s ease;overflow-y:auto;box-shadow:-14px 0 40px rgba(0,0,0,.35)}
+.custom-panel.open{transform:translateX(0)}
+.custom-panel .cp-head{padding:22px 22px 16px;border-bottom:1px solid rgba(247,245,239,.16);display:flex;justify-content:space-between;align-items:start;gap:12px}
+.custom-panel h2{font-family:var(--disp);text-transform:uppercase;font-size:22px;color:var(--gold);letter-spacing:.01em}
+.custom-panel .cp-sub{font-family:var(--ui);font-size:12px;color:#9fb2c6;margin-top:6px;line-height:1.5}
+.custom-panel .cp-close{background:transparent;border:1px solid rgba(247,245,239,.3);color:var(--paper);width:30px;height:30px;border-radius:50%;cursor:pointer;flex:none;font-size:15px;line-height:1}
+.custom-panel .cp-body{padding:20px 22px 32px;display:flex;flex-direction:column;gap:26px}
+.custom-panel fieldset{border:0;padding:0}
+.custom-panel legend{font-family:var(--ui);font-weight:700;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:12px;padding:0}
+.cp-swatches{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.cp-swatch{display:flex;align-items:center;gap:10px;font-family:var(--ui);font-size:13px;color:#dbe3ec}
+.cp-swatch input[type=color]{width:32px;height:32px;border:1px solid rgba(247,245,239,.3);border-radius:6px;background:none;padding:0;cursor:pointer}
+.cp-choices{display:flex;gap:8px;flex-wrap:wrap}
+.cp-choices button{font-family:var(--ui);font-weight:600;font-size:12px;letter-spacing:.03em;background:rgba(255,255,255,.08);color:#dbe3ec;border:1px solid rgba(247,245,239,.22);padding:8px 12px;border-radius:4px;cursor:pointer}
+.cp-choices button.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+.cp-actions{display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(247,245,239,.16);padding-top:20px}
+.cp-actions button{font-family:var(--ui);font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;padding:11px 14px;border-radius:4px;cursor:pointer;border:0}
+.cp-reset{background:transparent;color:#dbe3ec;border:1px solid rgba(247,245,239,.3) !important}
+.cp-copy{background:var(--gold);color:var(--ink)}
+.cp-export{width:100%;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;background:rgba(255,255,255,.06);color:#cfe3ef;border:1px solid rgba(247,245,239,.2);border-radius:4px;padding:10px;resize:vertical;min-height:96px}
+.cp-note{font-family:var(--ui);font-size:11.5px;color:#8a97a8;line-height:1.6}
+@media (max-width:560px){.custom-toggle span{display:none}}
+/* ============================================================ */
+
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;align-items:start}
+  .hero-side{border-left:0;border-top:1px solid rgba(247,245,239,.2);padding:26px 0 0;display:flex;gap:34px;flex-wrap:wrap}
+  .pillars,.chaplist{grid-template-columns:1fr 1fr}
+  .newsgrid,.join .wrap,.advisors .wrap{grid-template-columns:1fr}
+  .brief-col{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:26px}
+  .voices,.faq{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .navlinks{display:none}
+}
+@media (max-width:560px){
+  .pillars,.chaplist,.fgrid{grid-template-columns:1fr}
+  .topbar .wrap{justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn{transition:none}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="gapbar">
+  <div class="wrap">
+    <span>Staging preview — items marked below need content or a decision from Missouri DeMolay before launch.</span>
+    <button type="button" id="gapToggle" aria-pressed="false">Show content gaps</button>
+  </div>
+</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <div>Youth-led. Adult-advised. Since 1919.</div>
+    <div class="links">
+      <a href="#">Donate</a><a href="#">Contact</a>
+      <a href="#" data-gap="Link to member portal">Member login</a>
+      <a href="#">Facebook</a><a href="#">Instagram</a>
+      <a href="#" data-gap="Create or confirm accounts">YouTube</a>
+      <form class="sitesearch" role="search" onsubmit="event.preventDefault()">
+        <label for="q" class="skip">Search this site</label>
+        <input id="q" type="search" placeholder="Search">
+        <button type="submit">Go</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<nav class="main" aria-label="Primary">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <svg class="crest" viewBox="0 0 44 44" role="img" aria-label="Missouri DeMolay crest">
+        <path d="M22 2 40 9v12c0 11-7.5 18-18 21C11.5 39 4 32 4 21V9Z" fill="#0B1D33" stroke="#C9A227" stroke-width="2"/>
+        <path d="M22 9l3.2 6.6 7.2 1-5.2 5.1 1.2 7.2L22 25.5l-6.4 3.4 1.2-7.2-5.2-5.1 7.2-1Z" fill="#C9A227"/>
+      </svg>
+      <span class="brand-name">Missouri DeMolay<small>Where DeMolay Began</small></span>
+    </a>
+    <div class="navlinks">
+      <a href="#about">What Is DeMolay?</a>
+      <a href="#finder">Find a Chapter</a>
+      <a href="#families">For Families</a>
+      <a href="#mobull">News</a>
+      <a href="#advisors">Volunteer</a>
+    </div>
+    <a class="btn btn-gold" href="#join">Join</a>
+  </div>
+</nav>
+<div class="tristripe" role="presentation"></div>
+
+<main id="main">
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Kansas City · 1919 · The Show-Me State</p>
+      <h1>Where <span class="em">DeMolay</span><br>Began</h1>
+      <p class="lede">Every DeMolay chapter on Earth traces its story back to nine young men in Kansas City, Missouri. A century later, we're still building tomorrow's leaders today — through real responsibility, lifelong friendships, and a lot of fun along the way.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#join">Join DeMolay</a>
+        <a class="btn btn-line lt" href="#finder">Find a Chapter Near Me</a>
+        <span class="micro">Open to young men ages 9–21. Parents, start with <a href="#families" style="color:var(--gold-soft)">For Families</a>.</span>
+      </div>
+    </div>
+    <aside class="hero-side" aria-label="Missouri DeMolay at a glance">
+      <div class="fact"><b>1919</b><span>Founded in Kansas City</span></div>
+      <div class="fact"><b>25</b><span>Chapters in 4 districts</span></div>
+      <div class="fact"><b>9–21</b><span>Ages welcome, Squires to Knights</span></div>
+    </aside>
+  </div>
+</header>
+
+<div class="band">
+  <div class="wrap">
+    <span class="star">★</span> DeMolay International was founded at the original Scottish Rite Temple, 15th &amp; Troost, Kansas City — and Missouri has led the way ever since. <span class="star">★</span>
+  </div>
+</div>
+
+<section class="upnext" aria-label="Upcoming events">
+  <div class="wrap">
+    <p class="lbl">Coming Up</p>
+    <ul data-gap="Pull live from events calendar">
+      <li><b>Fall Conclave</b><span>Date &amp; location to be confirmed</span></li>
+      <li><b>Sports Tournament</b><span>Date &amp; location to be confirmed</span></li>
+      <li><b>University of DeMolay</b><span>Date &amp; location to be confirmed</span></li>
+    </ul>
+    <a class="btn btn-line" href="#">Full Calendar</a>
+  </div>
+</section>
+
+<section class="section reveal" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">The Order of DeMolay</p>
+        <h2>Built on a Century<br>of Character</h2>
+      </div>
+      <p>A youth-led, adult-advised fraternity where young men plan, organize, and run their own program — and learn to lead by actually leading.</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar">
+        <p class="mark">HERITAGE</p>
+        <h3>Born in Missouri</h3>
+        <p>DeMolay started here in 1919, when Frank S. Land gathered nine young men in Kansas City. The Show-Me State is the mother jurisdiction of a worldwide order.</p>
+        <a href="#">Our beginnings</a>
+      </article>
+      <article class="pillar">
+        <p class="mark">PROGRAM</p>
+        <h3>What We Do</h3>
+        <p>Members run their own meetings, service projects, sports tournaments, conclaves, and trips — with trained advisors backing them up, not running the show.</p>
+        <a href="#">See the program</a>
+      </article>
+      <article class="pillar">
+        <p class="mark">NAMESAKE</p>
+        <h3>Jacques DeMolay</h3>
+        <p>Our namesake, the last Grand Master of the Knights Templar, chose loyalty to his comrades over his own life. Fidelity is the first lesson of the Order.</p>
+        <a href="#">The story</a>
+      </article>
+      <article class="pillar">
+        <p class="mark">ALUMNI</p>
+        <h3>Famous Members</h3>
+        <p>Walt Disney, John Wayne, astronauts, athletes, and world leaders all wore the DeMolay pin. The next name on that list could be yours.</p>
+        <a href="#">Notable Senior DeMolays</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section finder reveal" id="finder">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Find a Chapter</p>
+        <h2>25 Chapters,<br>One Brotherhood</h2>
+      </div>
+      <p>Pick your district or type a chapter name. Meeting nights and locations are listed on each chapter's page.</p>
+    </div>
+    <div class="finder-controls">
+      <label for="dsel">District</label>
+      <select id="dsel"><option value="all">All districts</option><option value="1">District 1 — Greater St. Louis</option><option value="2">District 2 — East Central</option><option value="3">District 3 — Southwest</option><option value="4">District 4 — Greater Kansas City</option></select>
+      <label for="csearch">Search</label>
+      <input id="csearch" type="search" placeholder="Chapter name">
+      <span data-gap="Add ZIP radius search once addresses are collected" style="font-family:var(--ui);font-size:12.5px;color:#9fb2c6">ZIP search coming</span>
+    </div>
+    <p class="chapcount" id="chapcount" aria-live="polite"></p>
+    <div class="chaplist" id="chaplist"></div>
+  </div>
+</section>
+
+<section class="section families reveal" id="families">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">For Parents &amp; Guardians</p>
+        <h2>The Questions<br>You Should Ask</h2>
+      </div>
+      <p>Straight answers about safety, cost, time, and what DeMolay's relationship to Freemasonry actually means.</p>
+    </div>
+    <div class="faq">
+      <div class="q" data-gap="Confirm current youth-protection policy wording">
+        <h3>Is my son safe here?</h3>
+        <p>Every adult who works with members is screened and trained under DeMolay International's youth protection program before they set foot in a chapter room. Our jurisdiction's full policy, reporting process, and the name of our youth protection officer are published here.</p>
+      </div>
+      <div class="q" data-gap="Confirm current dues and fee amounts">
+        <h3>What does it cost?</h3>
+        <p>Membership involves initiation and annual dues set by DeMolay International and by each chapter, plus optional fees for trips and events. Current amounts are listed in full, and no young man is turned away for inability to pay — ask any advisor about assistance.</p>
+      </div>
+      <div class="q" data-gap="Confirm typical meeting cadence across chapters">
+        <h3>How much time does it take?</h3>
+        <p>Most chapters meet twice a month, with optional weekend events, service projects, and statewide gatherings through the year. Members choose how deep to go — and it's designed to fit around school, sports, and jobs.</p>
+      </div>
+      <div class="q">
+        <h3>Do we have to be Masons?</h3>
+        <p>No. DeMolay is sponsored by Freemasonry and shares its values, but membership is open to any young man ages 9–21 regardless of his family's background or faith tradition. Members are asked to believe in a Supreme Being; beyond that, no particular religion is required or taught.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">In Their Words</p>
+        <h2>Ask a Member</h2>
+      </div>
+      <p>The people best qualified to explain DeMolay are the young men in it.</p>
+    </div>
+    <div class="voices" data-gap="Replace with real member and alumni quotes, first name and chapter">
+      <blockquote class="voice"><p>Quote from a current member about what he does in his chapter and what changed for him.</p><cite>First name, Chapter</cite></blockquote>
+      <blockquote class="voice"><p>Quote from a Senior DeMolay about how the program shaped his career or confidence.</p><cite>First name, Alumni</cite></blockquote>
+      <blockquote class="voice"><p>Quote from a parent about what they noticed in their son after joining.</p><cite>First name, Parent</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="mobull" id="mobull" aria-label="The Mo Bull News">
+  <div class="wrap">
+    <div class="masthead">
+      <p class="over">The Official Publication of Missouri DeMolay</p>
+      <h2>The Mo <span class="bull">Bull</span> News</h2>
+    </div>
+    <p class="dateline">
+      <span data-gap="Set volume and issue number">Vol. — · No. —</span>
+      <span>Kansas City &amp; St. Louis, Missouri</span>
+      <span data-gap="Set edition date at publish">Current Edition</span>
+    </p>
+    <div class="newsgrid">
+      <article class="lead-story" data-gap="Replace with the current lead story">
+        <p class="tag">Front Page</p>
+        <h3>Conclave Draws Chapters From All Four Districts</h3>
+        <p class="byline">By the State Scribe</p>
+        <p class="drop">Missouri DeMolay's flagship gathering brings members from across the state together for ritual competition, elections, athletics, and the kind of late-night brotherhood no group chat can replace. Delegates elect a new slate of jurisdictional officers and install the incoming State Master Councilor.</p>
+        <p>Between sessions, members complete courses at the University of DeMolay covering public speaking, event planning, and personal finance — then promptly apply none of that restraint at the dodgeball bracket.</p>
+        <a href="#" class="btn btn-line" style="margin-top:8px">Read the Full Edition</a>
+      </article>
+      <aside class="brief-col">
+        <div class="brief" data-gap="Replace with current briefs">
+          <p class="cat">Service</p>
+          <h4>Annual 5K Returns to Forest Park</h4>
+          <p>Proceeds benefit the Walker Scottish Rite Clinic at Maryville University, helping preschoolers with speech and language disorders.</p>
+          <a href="#">Register</a>
+        </div>
+        <div class="brief">
+          <p class="cat">Squires</p>
+          <h4>Manor Social in St. Louis</h4>
+          <p>Squires ages 9–11 gather for games, pizza, and an introduction to what awaits them in DeMolay.</p>
+          <a href="#">RSVP</a>
+        </div>
+        <div class="brief">
+          <p class="cat">Honors</p>
+          <h4>Chevalier Nominations Open</h4>
+          <p>The highest honor an active DeMolay can receive. Advisors: check your inbox for the nomination packet.</p>
+          <a href="#">Details</a>
+        </div>
+        <div class="subscribe-box">
+          <h4>Never Miss an Edition</h4>
+          <p>The Mo Bull News, delivered to your inbox — no bull.</p>
+          <form id="subForm" data-gap="Connect to email platform">
+            <label for="subEmail" class="skip">Email address</label>
+            <input id="subEmail" type="email" required placeholder="you@example.com">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </aside>
+    </div>
+    <div class="archive-note">
+      <span>Looking for a past edition? Back issues are being digitized on the Missouri DeMolay Wiki.</span>
+      <a class="btn btn-line" href="#">Browse the Archive</a>
+    </div>
+  </div>
+</section>
+
+<section class="section join reveal" id="join">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Get Started</p>
+      <h2>Your Road Starts <span class="em">Here</span></h2>
+      <p>Tell us your name, your ZIP code, and your age. We'll connect you with the advisor at the nearest chapter — no obligation, no pressure, and no phone call unless you want one.</p>
+      <a class="btn btn-gold" href="#" data-gap="Point to real inquiry form and routing rules">Start a Membership Inquiry</a>
+    </div>
+    <div class="paths">
+      <div class="path"><b>Squires · Ages 9–11</b><span>A fun first step into the DeMolay family, with age-appropriate activities and mentorship.</span></div>
+      <div class="path"><b>DeMolay · Ages 12–21</b><span>The full program: leadership, ritual, service, athletics, travel, and lifelong brotherhood.</span></div>
+      <div class="path"><b>Knighthood · Ages 17–21</b><span>An advanced program for older members focused on maturity, philosophy, and leadership.</span></div>
+      <div class="path"><b>Leadership &amp; Service Club</b><span>For collegians who want to keep going after their DeMolay years.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="advisors" id="advisors">
+  <div class="wrap">
+    <div>
+      <p class="kicker" style="color:#bfe9f6">Adults &amp; Alumni</p>
+      <h2>Chapters Grow Only As Fast As Advisors Do</h2>
+      <p>If you can give a few evenings a month, you can change how a young man sees himself. Advisors are screened, trained, and never left to figure it out alone. Senior DeMolays, Masons, parents, and community volunteers are all welcome.</p>
+    </div>
+    <div class="acts">
+      <a class="btn btn-gold" href="#" data-gap="Link to advisor application">Apply to Advise</a>
+      <a class="btn btn-line lt" href="#">Alumni Sign-Up</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="tristripe" role="presentation"></div>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Missouri DeMolay</h4>
+        <p style="max-width:34ch;line-height:1.7">The premier fraternity for young men ages 9–21, headquartered in the birthplace of DeMolay International.</p>
+      </div>
+      <div>
+        <h4>The Order</h4>
+        <a href="#">What Is DeMolay?</a><a href="#">Our Beginnings</a><a href="#">Our Namesake</a><a href="#">How to Join</a>
+      </div>
+      <div>
+        <h4>Members</h4>
+        <a href="#">Events Calendar</a><a href="#">Mo Bull News</a><a href="#">Honors &amp; Awards</a><a href="#">Missouri DeMolay Wiki</a>
+      </div>
+      <div>
+        <h4>Families</h4>
+        <a href="#families">For Parents</a>
+        <a href="#" data-gap="Publish policy page">Youth Protection</a>
+        <a href="#">Contact</a><a href="#">Donate</a>
+      </div>
+    </div>
+    <p class="allegiance">
+      <b>Allegiance Statement.</b> This is the official website of Missouri DeMolay and acknowledges the authority and yields allegiance to DeMolay International, of which Frank S. Land was the founder. © 2026 Missouri DeMolay. All rights reserved. Site last updated <span data-gap="Wire to CMS publish date">August 2026</span>.
+    </p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     PROTOTYPE REVIEW TOOL — appearance customizer markup.
+     Delete this whole block (button + panel) before public launch,
+     or gate it behind an internal-only flag. See BLOCKED-ITEMS.md #17.
+     ============================================================ -->
+<button type="button" class="custom-toggle" id="cpToggle" aria-haspopup="true" aria-expanded="false" aria-controls="cpPanel">🎨 <span>Adjust Look</span></button>
+<aside class="custom-panel" id="cpPanel" aria-label="Appearance options" aria-hidden="true">
+  <div class="cp-head">
+    <div>
+      <h2>Look &amp; Feel</h2>
+      <p class="cp-sub">Try color, type, and shape options live. Saved only in this browser — nothing here is published.</p>
+    </div>
+    <button type="button" class="cp-close" id="cpClose" aria-label="Close appearance panel">✕</button>
+  </div>
+  <div class="cp-body">
+    <fieldset>
+      <legend>Palette</legend>
+      <div class="cp-swatches">
+        <label class="cp-swatch">Navy <input type="color" id="cpInk" value="#0B1D33"></label>
+        <label class="cp-swatch">Gold <input type="color" id="cpGold" value="#C9A227"></label>
+        <label class="cp-swatch">Teal <input type="color" id="cpTeal" value="#0F7495"></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Body Copy</legend>
+      <div class="cp-choices" id="cpFont">
+        <button type="button" data-font="serif" class="active">Serif (current)</button>
+        <button type="button" data-font="sans">Sans</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Corner Style</legend>
+      <div class="cp-choices" id="cpRadius">
+        <button type="button" data-radius="0px">Sharp</button>
+        <button type="button" data-radius="3px" class="active">Soft (current)</button>
+        <button type="button" data-radius="12px">Round</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Section Spacing</legend>
+      <div class="cp-choices" id="cpSpace">
+        <button type="button" data-space="56px">Compact</button>
+        <button type="button" data-space="80px" class="active">Comfortable (current)</button>
+        <button type="button" data-space="112px">Spacious</button>
+      </div>
+    </fieldset>
+    <div class="cp-actions">
+      <button type="button" class="cp-copy" id="cpCopy">Copy CSS Variables</button>
+      <textarea class="cp-export" id="cpExport" readonly aria-label="CSS variables to hand to developers" placeholder="Click &quot;Copy CSS Variables&quot; to generate a snippet for whoever finalizes the site."></textarea>
+      <button type="button" class="cp-reset" id="cpReset">Reset to Brand Defaults</button>
+      <p class="cp-note">This panel is a review tool for testing options — it is not a setting site visitors will see or use.</p>
+    </div>
+  </div>
+</aside>
+<!-- ============================================================ -->
+
+<script>
+// ---- chapter finder (data taken only from the existing site's chapter list) ----
+var CHAPTERS=[
+ {n:"Allegiance",d:1},{n:"Carondelet",d:1},{n:"Crestwood",d:1},{n:"Daniel Boone",d:1},
+ {n:"George L. Walters",d:1},{n:"Jefferson",d:1},{n:"Kirkwood",d:1},{n:"Perfection",d:1},
+ {n:"Progression",d:1},{n:"St. Charles",d:1},
+ {n:"Divine",d:2},{n:"Excelsior",d:2},{n:"Mineral Area",d:2},{n:"Sullivan",d:2},
+ {n:"Farnsworth",d:3},{n:"Joplin",d:3},{n:"The 13 Brothers",d:3},{n:"Waynesville",d:3},
+ {n:"Frank S. Land",d:4},{n:"Independence",d:4},{n:"Mochila",d:4},{n:"Mother",d:4},
+ {n:"Rising Sun",d:4},{n:"Robert Goldberg",d:4},{n:"William F. Kuhn",d:4}
+];
+var REGION={1:"District 1 · Greater St. Louis",2:"District 2 · East Central",3:"District 3 · Southwest",4:"District 4 · Greater Kansas City"};
+var listEl=document.getElementById('chaplist'),countEl=document.getElementById('chapcount'),
+    dsel=document.getElementById('dsel'),csearch=document.getElementById('csearch');
+function renderChapters(){
+  var d=dsel.value, q=csearch.value.trim().toLowerCase();
+  var rows=CHAPTERS.filter(function(c){
+    return (d==='all'||String(c.d)===d) && (!q||c.n.toLowerCase().indexOf(q)>-1);
+  });
+  countEl.textContent=rows.length+(rows.length===1?' chapter':' chapters')+' shown';
+  listEl.innerHTML=rows.length?rows.map(function(c){
+    return '<article class="chap"><b>'+c.n+'</b><span>'+REGION[c.d]+'</span><em>Meeting night listed on chapter page</em></article>';
+  }).join(''):'<p style="font-family:var(--ui);color:#cdd7e3">No chapter matches that name. Try clearing the search, or contact us and we will point you to the closest one.</p>';
+}
+dsel.addEventListener('change',renderChapters);
+csearch.addEventListener('input',renderChapters);
+renderChapters();
+
+// ---- newsletter placeholder ----
+document.getElementById('subForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  this.innerHTML='<p style="color:#E7D290;font-weight:700;font-family:var(--ui)">You’re subscribed. Welcome aboard, Brother.</p>';
+});
+
+// ---- content-gap review mode ----
+var gt=document.getElementById('gapToggle');
+gt.addEventListener('click',function(){
+  var on=document.body.classList.toggle('show-gaps');
+  gt.setAttribute('aria-pressed',on);
+  gt.textContent=on?'Hide content gaps':'Show content gaps';
+});
+
+// ---- scroll reveal, motion-safe ----
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+}else{
+  document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
+}
+
+// ============================================================
+// PROTOTYPE REVIEW TOOL — appearance customizer logic.
+// Delete this whole block before public launch, along with the
+// CSS block above and the markup block above. See BLOCKED-ITEMS.md #17.
+// ============================================================
+(function(){
+  var STORAGE_KEY='modemolay-theme-prefs';
+  var DEFAULTS={
+    '--ink':'#0B1D33','--gold':'#C9A227','--gold-soft':'#E7D290',
+    '--teal':'#1799BE','--teal-deep':'#0F7495',
+    '--serif':'"Source Serif 4",serif','--radius':'3px','--space-section':'80px'
+  };
+  var root=document.documentElement.style;
+  var toggle=document.getElementById('cpToggle'), panel=document.getElementById('cpPanel'), closeBtn=document.getElementById('cpClose');
+  var inkI=document.getElementById('cpInk'), goldI=document.getElementById('cpGold'), tealI=document.getElementById('cpTeal');
+  var fontWrap=document.getElementById('cpFont'), radiusWrap=document.getElementById('cpRadius'), spaceWrap=document.getElementById('cpSpace');
+  var copyBtn=document.getElementById('cpCopy'), exportArea=document.getElementById('cpExport'), resetBtn=document.getElementById('cpReset');
+
+  function current(name){
+    var v=getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    return v || DEFAULTS[name];
+  }
+  function hexFrom(name){ var v=current(name); return /^#/.test(v)?v:DEFAULTS[name]; }
+  function persist(){
+    try{
+      var snap={};
+      Object.keys(DEFAULTS).forEach(function(k){ snap[k]=current(k); });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(snap));
+    }catch(e){}
+  }
+  function setVar(name,val){ root.setProperty(name,val); persist(); }
+  function setActive(wrap,attr,val){
+    wrap.querySelectorAll('button').forEach(function(b){ b.classList.toggle('active', b.getAttribute(attr)===val); });
+  }
+
+  // reflect whatever the preload script already applied
+  inkI.value=hexFrom('--ink'); goldI.value=hexFrom('--gold'); tealI.value=hexFrom('--teal-deep');
+  (function(){
+    var f=current('--serif').indexOf('Barlow')>-1 && current('--serif').indexOf('Barlow Condensed')===-1 ? 'sans':'serif';
+    setActive(fontWrap,'data-font',f);
+  })();
+  setActive(radiusWrap,'data-radius',current('--radius'));
+  setActive(spaceWrap,'data-space',current('--space-section'));
+
+  inkI.addEventListener('input',function(){ setVar('--ink',this.value); });
+  goldI.addEventListener('input',function(){ setVar('--gold',this.value); setVar('--gold-soft',this.value); });
+  tealI.addEventListener('input',function(){ setVar('--teal-deep',this.value); setVar('--teal',this.value); });
+
+  fontWrap.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    var f=b.dataset.font==='sans'?'"Barlow",sans-serif':'"Source Serif 4",serif';
+    setVar('--serif',f); setActive(fontWrap,'data-font',b.dataset.font);
+  });
+  radiusWrap.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    setVar('--radius',b.dataset.radius); setActive(radiusWrap,'data-radius',b.dataset.radius);
+  });
+  spaceWrap.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    setVar('--space-section',b.dataset.space); setActive(spaceWrap,'data-space',b.dataset.space);
+  });
+
+  function openPanel(){ panel.classList.add('open'); panel.setAttribute('aria-hidden','false'); toggle.setAttribute('aria-expanded','true'); }
+  function closePanel(){ panel.classList.remove('open'); panel.setAttribute('aria-hidden','true'); toggle.setAttribute('aria-expanded','false'); }
+  toggle.addEventListener('click',function(){ panel.classList.contains('open')?closePanel():openPanel(); });
+  closeBtn.addEventListener('click',closePanel);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closePanel(); });
+
+  copyBtn.addEventListener('click',function(){
+    var lines=[':root{'];
+    Object.keys(DEFAULTS).forEach(function(k){ lines.push('  '+k+': '+current(k)+';'); });
+    lines.push('}');
+    var css=lines.join('\n');
+    exportArea.value=css;
+    exportArea.focus(); exportArea.select();
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(css).catch(function(){});
+    }
+  });
+
+  resetBtn.addEventListener('click',function(){
+    Object.keys(DEFAULTS).forEach(function(k){ root.setProperty(k,DEFAULTS[k]); });
+    try{ localStorage.removeItem(STORAGE_KEY); }catch(e){}
+    inkI.value=DEFAULTS['--ink']; goldI.value=DEFAULTS['--gold']; tealI.value=DEFAULTS['--teal-deep'];
+    setActive(fontWrap,'data-font','serif'); setActive(radiusWrap,'data-radius','3px'); setActive(spaceWrap,'data-space','80px');
+    exportArea.value='';
+  });
+})();
+</script>
+</body>
+</html>

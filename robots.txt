@@ -1,0 +1,5 @@
+# PROTOTYPE STAGING — block all crawling while this is a review copy, not the live site.
+# Delete this file (or replace with a normal robots.txt) when Missouri DeMolay approves public launch.
+# See BLOCKED-ITEMS.md #16.
+User-agent: *
+Disallow: /
