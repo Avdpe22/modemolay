@@ -535,14 +535,14 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
         <p class="eyebrow">Find a Chapter</p>
         <h2>23 Chapters,<br>One Brotherhood</h2>
       </div>
-      <p>Pick your district or type a chapter name. Meeting nights and locations are being confirmed with each chapter and will be listed here.</p>
+      <p>Search by chapter name or by your town, or pick your district. <span data-gap="Add meeting night and time for each chapter once the chapters report them.">Meeting nights and times are being confirmed with each chapter and will be listed here.</span></p>
     </div>
     <div class="finder-controls">
-      <label for="dsel" data-gap="District assignments unconfirmed — verify all 23 chapters against the wiki">District</label>
-      <select id="dsel"><option value="all">All districts</option><option value="1">District 1 — Greater St. Louis</option><option value="2">District 2 — East Central</option><option value="3">District 3 — Southwest</option><option value="4">District 4 — Greater Kansas City</option></select>
+      <label for="dsel" data-gap="District descriptors were adjusted to match the confirmed meeting cities — confirm the official district names.">District</label>
+      <select id="dsel"><option value="all">All districts</option><option value="1">District 1 — Greater St. Louis</option><option value="2">District 2 — Southeast</option><option value="3">District 3 — Southwest &amp; Central</option><option value="4">District 4 — Greater Kansas City</option></select>
       <label for="csearch">Search</label>
-      <input id="csearch" type="search" placeholder="Chapter name">
-      <span data-gap="Add ZIP radius search once addresses are collected" style="font-family:var(--ui);font-size:12.5px;color:#9fb2c6">ZIP search coming</span>
+      <input id="csearch" type="search" placeholder="Chapter or town">
+      <span data-gap="Add full street addresses and ZIP radius search once collected" style="font-family:var(--ui);font-size:12.5px;color:#9fb2c6">ZIP search coming</span>
     </div>
     <p class="chapcount" id="chapcount" aria-live="polite"></p>
     <div class="chaplist" id="chaplist"></div>
@@ -847,29 +847,51 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
 
 <script>
 // ---- chapter finder ----
-// Chapter NAMES are the 23 confirmed by the Executive Officer.
-// DISTRICT assignments are NOT confirmed — carried-over chapters keep their previous
-// district; the seven new ones are placed by city geography. See BLOCKED-ITEMS.md #8.
+// All 23 chapters, districts and meeting places confirmed against the Missouri
+// DeMolay Wiki. Meeting night and time are still outstanding — BLOCKED-ITEMS.md #8.
 var CHAPTERS=[
- {n:"Allegiance",d:1},{n:"Carondelet",d:1},{n:"Crestwood",d:1},{n:"George L. Walters",d:1},
- {n:"Mid Rivers",d:1},{n:"Progression",d:1},{n:"Saint Charles",d:1},{n:"Wentzville",d:1},
- {n:"Divine",d:2},{n:"Excelsior",d:2},{n:"Mineral Area",d:2},{n:"Rolla",d:2},
- {n:"Crocker",d:3},{n:"Farnsworth",d:3},{n:"Joplin",d:3},
- {n:"Clinton",d:4},{n:"Frank S. Land",d:4},{n:"Independence",d:4},{n:"Liberty",d:4},
- {n:"Mochila",d:4},{n:"Mother",d:4},{n:"Rising Sun",d:4},{n:"William F. Kuhn",d:4}
+ {n:"Allegiance",       d:1,v:"Eureka Masonic Lodge",           c:"Eureka"},
+ {n:"Carondelet",       d:1,v:"Webster Groves Masonic Temple",  c:"St. Louis"},
+ {n:"Crestwood",        d:1,v:"Crestwood-Anchor Masonic Lodge", c:"St. Louis"},
+ {n:"George L. Walters",d:1,v:"Rose Hill Masonic Temple",       c:"Creve Coeur"},
+ {n:"Mid Rivers",       d:1,v:"Bridgeton Masonic Lodge #80",    c:"Saint Peters"},
+ {n:"Progression",      d:1,v:"Fenton Lodge",                   c:"Fenton"},
+ {n:"Saint Charles",    d:1,v:"Saint Charles Lodge",            c:"Saint Charles"},
+ {n:"Wentzville",       d:1,v:"Wentzville Masonic Temple",      c:"Wentzville"},
+ {n:"Divine",           d:2,v:"Poplar Bluff Masonic Complex",   c:"Poplar Bluff"},
+ {n:"Excelsior",        d:2,v:"Excelsior Lodge",                c:"Jackson"},
+ {n:"Mineral Area",     d:2,v:"Elvins Ionic Lodge",             c:"Desloge"},
+ {n:"Crocker",          d:3,v:"Crocker IOOF",                   c:"Crocker"},
+ {n:"Farnsworth",       d:3,v:"Gate of the Temple Lodge",       c:"Springfield"},
+ {n:"Joplin",           d:3,v:"Fellowship Lodge",               c:"Joplin"},
+ {n:"Rolla",            d:3,v:"Rolla Lodge",                    c:"Rolla"},
+ {n:"Clinton",          d:4,v:"Clinton Masonic Lodge",          c:"Clinton"},
+ {n:"Frank S. Land",    d:4,v:"Ararat Shrine",                  c:"Blue Springs"},
+ {n:"Independence",     d:4,v:"Independence Masonic Temple",    c:"Independence"},
+ {n:"Liberty",          d:4,v:"Liberty Masonic Lodge",          c:"Liberty"},
+ {n:"Mochila",          d:4,v:"Moila Shrine Temple",            c:"St. Joseph"},
+ {n:"Mother",           d:4,v:"Ivanhoe Masonic Lodge",          c:"Kansas City"},
+ {n:"Rising Sun",       d:4,v:"Rising Sun Lodge",               c:"Kansas City"},
+ {n:"William F. Kuhn",  d:4,v:"Swope Park Lodge",               c:"Kansas City"}
 ];
-var REGION={1:"District 1 · Greater St. Louis",2:"District 2 · East Central",3:"District 3 · Southwest",4:"District 4 · Greater Kansas City"};
+var REGION={1:"District 1 · Greater St. Louis",2:"District 2 · Southeast",3:"District 3 · Southwest &amp; Central",4:"District 4 · Greater Kansas City"};
 var listEl=document.getElementById('chaplist'),countEl=document.getElementById('chapcount'),
     dsel=document.getElementById('dsel'),csearch=document.getElementById('csearch');
+function esc(s){return String(s).replace(/[&<>"]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]});}
+// "Saint Charles", "St. Charles" and "st charles" all need to find the same chapter
+function norm(s){return String(s).toLowerCase().replace(/\./g,'').replace(/\bsaint\b/g,'st').replace(/\s+/g,' ').trim();}
+CHAPTERS.forEach(function(c){c._h=norm(c.n+' '+c.c+' '+c.v);});
 function renderChapters(){
-  var d=dsel.value, q=csearch.value.trim().toLowerCase();
+  var d=dsel.value, q=norm(csearch.value);
   var rows=CHAPTERS.filter(function(c){
-    return (d==='all'||String(c.d)===d) && (!q||c.n.toLowerCase().indexOf(q)>-1);
+    // match on chapter name, town, or the name of the building it meets in
+    return (d==='all'||String(c.d)===d) && (!q||c._h.indexOf(q)>-1);
   });
   countEl.textContent=rows.length+(rows.length===1?' chapter':' chapters')+' shown';
   listEl.innerHTML=rows.length?rows.map(function(c){
-    return '<article class="chap"><b>'+c.n+'</b><span>'+REGION[c.d]+'</span><em>Meeting night &amp; location coming soon</em></article>';
-  }).join(''):'<p style="font-family:var(--ui);color:#cdd7e3">No chapter matches that name. Try clearing the search, or contact us and we will point you to the closest one.</p>';
+    return '<article class="chap"><b>'+esc(c.n)+'</b><span>'+REGION[c.d]+'</span>'+
+           '<em>'+esc(c.v)+'<br>'+esc(c.c)+', Missouri</em></article>';
+  }).join(''):'<p style="font-family:var(--ui);color:#cdd7e3">No chapter matches that. Try a nearby town, clear the search, or <a href="mailto:info@modemolay.org" style="color:var(--gold-soft)">contact us</a> and we will point you to the closest one.</p>';
 }
 dsel.addEventListener('change',renderChapters);
 csearch.addEventListener('input',renderChapters);
