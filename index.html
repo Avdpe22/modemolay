@@ -6,7 +6,7 @@
 <!-- PROTOTYPE: keep this off search engines until MO DeMolay approves launch. Remove this tag when going live. See BLOCKED-ITEMS.md #16. -->
 <meta name="robots" content="noindex, nofollow">
 <title>Missouri DeMolay — Where DeMolay Began | Leadership for Young Men Ages 9–21</title>
-<meta name="description" content="DeMolay was founded in Kansas City in 1919. Missouri DeMolay is a youth-led, adult-advised leadership fraternity for young men ages 9–21, with 25 chapters across the state.">
+<meta name="description" content="DeMolay was founded in Kansas City in 1919. Missouri DeMolay is a youth-led, adult-advised leadership fraternity for young men ages 9–21, with 23 chapters across the state.">
 <link rel="canonical" href="https://www.modemolay.org/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Missouri DeMolay">
@@ -89,7 +89,7 @@ nav.main.scrolled{background:rgba(247,245,239,.98);box-shadow:0 8px 26px -14px r
 nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:13px;padding-bottom:13px;min-height:var(--nav-h)}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
 .crest{width:44px;height:44px;flex:none}
-.brand-logo{height:42px;width:auto;flex:none;color:var(--ink)}
+.brand-logo{height:46px;width:auto;flex:none;display:block}
 .brand-name{font-family:var(--disp);font-weight:700;font-size:24px;line-height:.9;text-transform:uppercase}
 .brand-name small{display:block;font-family:var(--ui);font-weight:600;font-size:9.5px;letter-spacing:.28em;color:var(--teal-deep)}
 .navlinks{display:flex;gap:26px;font-family:var(--ui);font-weight:600;font-size:14.5px;letter-spacing:.03em}
@@ -281,6 +281,8 @@ footer{background:#081525;color:#aebacb;font-family:var(--ui);font-size:14px}
 footer .wrap{padding-top:56px;padding-bottom:34px}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:40px}
 .fgrid h4{font-family:var(--disp);text-transform:uppercase;font-size:18px;color:var(--paper);margin-bottom:14px;letter-spacing:.04em}
+.fgrid h4.flogo{margin-bottom:18px}
+.fgrid h4.flogo img{display:block;width:min(230px,100%);height:auto}
 .fgrid a{color:#aebacb;text-decoration:none;display:block;line-height:2.1}
 .fgrid a:hover{color:var(--gold-soft)}
 .fsocial{display:flex;flex-wrap:wrap;gap:4px;margin-top:14px;margin-left:-7px}
@@ -357,7 +359,7 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
 }
 @media (max-width:560px){
   .pillars,.chaplist,.fgrid,.friendgrid,.postgrid{grid-template-columns:1fr}
-  .brand-logo{height:34px}
+  .brand-logo{height:38px}
   .topbar .wrap{justify-content:center;gap:10px}
   .topbar>.wrap>div:first-child{flex-basis:100%;text-align:center}
   .topbar .links{justify-content:center;width:100%}
@@ -404,7 +406,7 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
     <div class="links">
       <a href="donate.html">Donate</a>
       <a href="mailto:info@modemolay.org">Contact</a>
-      <a href="members.html">Member login</a>
+      <a href="https://wiki.modemolay.org" target="_blank" rel="noopener">Member login</a>
       <span class="socials">
         <a class="social" href="https://www.facebook.com/missouri.demolay/" target="_blank" rel="noopener" aria-label="Missouri DeMolay on Facebook"><svg class="social-ic" aria-hidden="true"><use href="#ic-facebook"/></svg></a>
         <a class="social" href="https://www.instagram.com/missouri.demolay/" target="_blank" rel="noopener" aria-label="Missouri DeMolay on Instagram"><svg class="social-ic" aria-hidden="true"><use href="#ic-instagram"/></svg></a>
@@ -423,31 +425,8 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
 
 <nav class="main" aria-label="Primary">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Missouri DeMolay — home" data-gap="Swap in official logo artwork (vector) when supplied">
-      <svg class="brand-logo" viewBox="0 0 320 96" role="img" aria-label="DeMolay Missouri">
-        <title>DeMolay Missouri</title>
-        <defs>
-          <path id="mdStar" d="M0,-7 1.6,-2.2 6.7,-2.2 2.6,0.8 4.1,5.7 0,2.7 -4.1,5.7 -2.6,0.8 -6.7,-2.2 -1.6,-2.2Z"/>
-        </defs>
-        <g fill="currentColor">
-          <use href="#mdStar" x="40" y="14"/>
-          <use href="#mdStar" x="70" y="14"/>
-          <use href="#mdStar" x="100" y="14"/>
-          <use href="#mdStar" x="130" y="14"/>
-          <use href="#mdStar" x="190" y="14"/>
-          <use href="#mdStar" x="220" y="14"/>
-          <use href="#mdStar" x="250" y="14"/>
-          <use href="#mdStar" x="280" y="14"/>
-        </g>
-        <circle cx="160" cy="14" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
-        <use href="#mdStar" x="160" y="14.5" fill="currentColor"/>
-        <text x="160" y="66" text-anchor="middle" fill="currentColor"
-              font-family="'Barlow Condensed','Arial Narrow',system-ui,sans-serif"
-              font-weight="700" font-size="54" letter-spacing="1">DEMOLAY</text>
-        <text x="279" y="87" text-anchor="end" fill="currentColor"
-              font-family="'Barlow Condensed','Arial Narrow',system-ui,sans-serif"
-              font-weight="700" font-size="16" letter-spacing="6.5">MISSOURI</text>
-      </svg>
+    <a class="brand" href="index.html" aria-label="Missouri DeMolay — home">
+      <img class="brand-logo" src="assets/logo-horizontal.svg" alt="" width="392" height="100" decoding="async">
     </a>
     <div class="navlinks">
       <a href="#about">What Is DeMolay?</a>
@@ -487,7 +466,7 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
     </div>
     <aside class="hero-side" aria-label="Missouri DeMolay at a glance">
       <div class="fact"><b>1919</b><span>Founded in Kansas City</span></div>
-      <div class="fact"><b>25</b><span>Chapters in 4 districts</span></div>
+      <div class="fact"><b>23</b><span>Chapters in 4 districts</span></div>
       <div class="fact"><b>9–21</b><span>Ages welcome, Squires to Knights</span></div>
     </aside>
   </div>
@@ -499,15 +478,15 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
   </div>
 </div>
 
-<section class="upnext" aria-label="Upcoming events">
+<section class="upnext" aria-label="What happens through the year">
   <div class="wrap">
-    <p class="lbl">Coming Up</p>
-    <ul data-gap="Pull live from events calendar">
-      <li><b>Fall Conclave</b><span>Date &amp; location to be confirmed</span></li>
-      <li><b>Sports Tournament</b><span>Date &amp; location to be confirmed</span></li>
-      <li><b>University of DeMolay</b><span>Date &amp; location to be confirmed</span></li>
+    <p class="lbl">Through the Year</p>
+    <ul data-gap="Confirm 'Convention' vs 'Conclave' as the official name, and add the current-year date and host city once set">
+      <li><b>State Convention</b><span>Our one statewide annual gathering</span></li>
+      <li><b>Installations</b><span>Chapters install new officers twice a year</span></li>
+      <li><b>Service &amp; Socials</b><span>Run by chapters year-round</span></li>
     </ul>
-    <a class="btn btn-line" href="events.html">Full Calendar</a>
+    <a class="btn btn-line" href="events.html">What We Do</a>
   </div>
 </section>
 
@@ -554,12 +533,12 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
     <div class="section-head">
       <div>
         <p class="eyebrow">Find a Chapter</p>
-        <h2>25 Chapters,<br>One Brotherhood</h2>
+        <h2>23 Chapters,<br>One Brotherhood</h2>
       </div>
-      <p>Pick your district or type a chapter name. Meeting nights and locations are listed on each chapter's page.</p>
+      <p>Pick your district or type a chapter name. Meeting nights and locations are being confirmed with each chapter and will be listed here.</p>
     </div>
     <div class="finder-controls">
-      <label for="dsel">District</label>
+      <label for="dsel" data-gap="District assignments unconfirmed — verify all 23 chapters against the wiki">District</label>
       <select id="dsel"><option value="all">All districts</option><option value="1">District 1 — Greater St. Louis</option><option value="2">District 2 — East Central</option><option value="3">District 3 — Southwest</option><option value="4">District 4 — Greater Kansas City</option></select>
       <label for="csearch">Search</label>
       <input id="csearch" type="search" placeholder="Chapter name">
@@ -580,13 +559,13 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
       <p>Straight answers about safety, cost, time, and what DeMolay's relationship to Freemasonry actually means.</p>
     </div>
     <div class="faq">
-      <div class="q" data-gap="Confirm current youth-protection policy wording">
+      <div class="q">
         <h3>Is my son safe here?</h3>
-        <p>Every adult who works with members is screened and trained under DeMolay International's youth protection program before they set foot in a chapter room. Our jurisdiction's full policy, reporting process, and the name of our youth protection officer are published here.</p>
+        <p>Every adult is background-checked, trained, and approved before he sets foot in a chapter room — and no adult is ever alone with your son. Two registered advisors are required at every single meeting and event, with more as the group grows. The <a href="youth-protection.html">full policy</a>, the supervision rules, and how to report a concern are all published.</p>
       </div>
-      <div class="q" data-gap="Confirm current dues and fee amounts">
+      <div class="q">
         <h3>What does it cost?</h3>
-        <p>Membership involves initiation and annual dues set by DeMolay International and by each chapter, plus optional fees for trips and events. Current amounts are listed in full, and no young man is turned away for inability to pay — ask any advisor about assistance.</p>
+        <p>There are no annual dues. Joining is a one-time <strong>$40 life membership fee</strong>, plus whatever fee your local chapter charges — <span data-gap="Confirm the typical range of chapter fees">amounts vary by chapter, so ask the one you visit</span>. Trips and statewide events have their own optional costs. No young man is turned away for inability to pay — ask any advisor about assistance.</p>
       </div>
       <div class="q" data-gap="Confirm typical meeting cadence across chapters">
         <h3>How much time does it take?</h3>
@@ -634,7 +613,7 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
         <h3>Conclave Draws Chapters From All Four Districts</h3>
         <p class="byline">By the State Scribe</p>
         <p class="drop">Missouri DeMolay's flagship gathering brings members from across the state together for ritual competition, elections, athletics, and the kind of late-night brotherhood no group chat can replace. Delegates elect a new slate of jurisdictional officers and install the incoming State Master Councilor.</p>
-        <p>Between sessions, members complete courses at the University of DeMolay covering public speaking, event planning, and personal finance — then promptly apply none of that restraint at the dodgeball bracket.</p>
+        <p>Between sessions, members sit through leadership workshops on public speaking, event planning, and personal finance — then promptly apply none of that restraint at the dodgeball bracket.</p>
         <a href="news.html" class="btn btn-line" style="margin-top:8px">Read the Full Edition</a>
       </article>
       <aside class="brief-col">
@@ -642,13 +621,13 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
           <p class="cat">Service</p>
           <h4>Annual 5K Returns to Forest Park</h4>
           <p>Proceeds benefit the Walker Scottish Rite Clinic at Maryville University, helping preschoolers with speech and language disorders.</p>
-          <a href="events.html">Register</a>
+          <a href="events.html">Details</a>
         </div>
         <div class="brief">
           <p class="cat">Squires</p>
           <h4>Manor Social in St. Louis</h4>
           <p>Squires ages 9–11 gather for games, pizza, and an introduction to what awaits them in DeMolay.</p>
-          <a href="events.html">RSVP</a>
+          <a href="events.html">Details</a>
         </div>
         <div class="brief">
           <p class="cat">Honors</p>
@@ -659,11 +638,7 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
         <div class="subscribe-box">
           <h4>Never Miss an Edition</h4>
           <p>The Mo Bull News, delivered to your inbox — no bull.</p>
-          <form id="subForm" data-gap="Connect to email platform">
-            <label for="subEmail" class="skip">Email address</label>
-            <input id="subEmail" type="email" required placeholder="you@example.com">
-            <button type="submit">Subscribe</button>
-          </form>
+          <p data-gap="Swap this link for the Mailchimp embedded form once the embed code is supplied, so visitors sign up without leaving the site"><a class="btn btn-gold" href="https://eepurl.com/gO1-KD" target="_blank" rel="noopener">Subscribe on Mailchimp</a></p>
         </div>
       </aside>
     </div>
@@ -708,8 +683,8 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
     </div>
 
     <div class="archive-note">
-      <span>Looking for a past edition? Back issues are being digitized on the Missouri DeMolay Wiki.</span>
-      <a class="btn btn-line" href="news.html#archive">Browse the Archive</a>
+      <span>Looking for a past edition? Every issue is in the Mo Bull News email archive.</span>
+      <a class="btn btn-line" href="https://us8.campaign-archive.com/home/?u=85d08dc4994b4b44a9cd49124&amp;id=ca07c314cf" target="_blank" rel="noopener">Browse the Archive</a>
     </div>
   </div>
 </section>
@@ -719,8 +694,9 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
     <div>
       <p class="eyebrow">Get Started</p>
       <h2>Your Road Starts <span class="em">Here</span></h2>
-      <p>Tell us your name, your ZIP code, and your age. We'll connect you with the advisor at the nearest chapter — no obligation, no pressure, and no phone call unless you want one.</p>
-      <a class="btn btn-gold" href="membership-inquiry.html">Start a Membership Inquiry</a>
+      <p>Membership applications are handled by DeMolay International, who pass your information to Missouri DeMolay. Fill out their short application and an advisor from the nearest chapter will follow up — no obligation, no pressure, and no phone call unless you want one.</p>
+      <a class="btn btn-gold" href="https://beademolay.org/join/application/" target="_blank" rel="noopener">Start Your Application</a>
+      <p style="margin-top:14px;font-size:14px">Just have a question first? Email <a href="mailto:info@modemolay.org">info@modemolay.org</a> or use the <a href="https://beademolay.org/join/#JoinForm" target="_blank" rel="noopener">DeMolay International join form</a>.</p>
     </div>
     <div class="paths">
       <div class="path"><b>Squires · Ages 9–11</b><span>A fun first step into the DeMolay family, with age-appropriate activities and mentorship.</span></div>
@@ -778,7 +754,7 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <h4>Missouri DeMolay</h4>
+        <h4 class="flogo"><img src="assets/logo-stacked-white.svg" alt="Missouri DeMolay" width="1000" height="322" loading="lazy" decoding="async"></h4>
         <p style="max-width:34ch;line-height:1.7">The premier fraternity for young men ages 9–21, headquartered in the birthplace of DeMolay International.</p>
         <p style="margin-top:12px;line-height:1.7"><a href="mailto:info@modemolay.org">info@modemolay.org</a></p>
         <div class="fsocial">
@@ -795,7 +771,7 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
       </div>
       <div>
         <h4>Members</h4>
-        <a href="events.html">Events Calendar</a><a href="news.html">Mo Bull News</a><a href="honors.html">Honors &amp; Awards</a><a href="members.html#wiki">Missouri DeMolay Wiki</a>
+        <a href="events.html">The DeMolay Year</a><a href="news.html">Mo Bull News</a><a href="honors.html">Honors &amp; Awards</a><a href="https://wiki.modemolay.org" target="_blank" rel="noopener">Missouri DeMolay Wiki</a>
       </div>
       <div>
         <h4>Families</h4>
@@ -870,15 +846,17 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
 <!-- ============================================================ -->
 
 <script>
-// ---- chapter finder (data taken only from the existing site's chapter list) ----
+// ---- chapter finder ----
+// Chapter NAMES are the 23 confirmed by the Executive Officer.
+// DISTRICT assignments are NOT confirmed — carried-over chapters keep their previous
+// district; the seven new ones are placed by city geography. See BLOCKED-ITEMS.md #8.
 var CHAPTERS=[
- {n:"Allegiance",d:1},{n:"Carondelet",d:1},{n:"Crestwood",d:1},{n:"Daniel Boone",d:1},
- {n:"George L. Walters",d:1},{n:"Jefferson",d:1},{n:"Kirkwood",d:1},{n:"Perfection",d:1},
- {n:"Progression",d:1},{n:"St. Charles",d:1},
- {n:"Divine",d:2},{n:"Excelsior",d:2},{n:"Mineral Area",d:2},{n:"Sullivan",d:2},
- {n:"Farnsworth",d:3},{n:"Joplin",d:3},{n:"The 13 Brothers",d:3},{n:"Waynesville",d:3},
- {n:"Frank S. Land",d:4},{n:"Independence",d:4},{n:"Mochila",d:4},{n:"Mother",d:4},
- {n:"Rising Sun",d:4},{n:"Robert Goldberg",d:4},{n:"William F. Kuhn",d:4}
+ {n:"Allegiance",d:1},{n:"Carondelet",d:1},{n:"Crestwood",d:1},{n:"George L. Walters",d:1},
+ {n:"Mid Rivers",d:1},{n:"Progression",d:1},{n:"Saint Charles",d:1},{n:"Wentzville",d:1},
+ {n:"Divine",d:2},{n:"Excelsior",d:2},{n:"Mineral Area",d:2},{n:"Rolla",d:2},
+ {n:"Crocker",d:3},{n:"Farnsworth",d:3},{n:"Joplin",d:3},
+ {n:"Clinton",d:4},{n:"Frank S. Land",d:4},{n:"Independence",d:4},{n:"Liberty",d:4},
+ {n:"Mochila",d:4},{n:"Mother",d:4},{n:"Rising Sun",d:4},{n:"William F. Kuhn",d:4}
 ];
 var REGION={1:"District 1 · Greater St. Louis",2:"District 2 · East Central",3:"District 3 · Southwest",4:"District 4 · Greater Kansas City"};
 var listEl=document.getElementById('chaplist'),countEl=document.getElementById('chapcount'),
@@ -890,18 +868,12 @@ function renderChapters(){
   });
   countEl.textContent=rows.length+(rows.length===1?' chapter':' chapters')+' shown';
   listEl.innerHTML=rows.length?rows.map(function(c){
-    return '<article class="chap"><b>'+c.n+'</b><span>'+REGION[c.d]+'</span><em>Meeting night listed on chapter page</em></article>';
+    return '<article class="chap"><b>'+c.n+'</b><span>'+REGION[c.d]+'</span><em>Meeting night &amp; location coming soon</em></article>';
   }).join(''):'<p style="font-family:var(--ui);color:#cdd7e3">No chapter matches that name. Try clearing the search, or contact us and we will point you to the closest one.</p>';
 }
 dsel.addEventListener('change',renderChapters);
 csearch.addEventListener('input',renderChapters);
 renderChapters();
-
-// ---- newsletter placeholder ----
-document.getElementById('subForm').addEventListener('submit',function(e){
-  e.preventDefault();
-  this.innerHTML='<p style="color:#E7D290;font-weight:700;font-family:var(--ui)">You’re subscribed. Welcome aboard, Brother.</p>';
-});
 
 // ---- content-gap review mode ----
 var gt=document.getElementById('gapToggle');

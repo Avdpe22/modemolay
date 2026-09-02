@@ -17,13 +17,29 @@ the list of decisions the Executive Officer needs to make first.
 | `index.html` | Homepage. |
 | `what-is-demolay.html`, `our-beginnings.html`, `our-namesake.html`, `the-program.html`, `notable-demolays.html`, `how-to-join.html` | "The Order" content pages. |
 | `news.html`, `story-*.html` | The Mo Bull News hub and its (placeholder) posts. |
-| `events.html`, `honors.html`, `volunteer.html`, `alumni.html`, `members.html` | Program, honors, and getting-involved pages. |
-| `donate.html`, `membership-inquiry.html`, `youth-protection.html` | Pages that resolve every link but are gated on a decision (see `BLOCKED-ITEMS.md`). |
+| `events.html`, `honors.html`, `volunteer.html`, `alumni.html`, `members.html` | Program, honors, and getting-involved pages. `events.html` is titled "The DeMolay Year" — the filename is kept so existing links still resolve. |
+| `donate.html`, `youth-protection.html` | Pages that resolve every link but are gated on a decision (see `BLOCKED-ITEMS.md`). |
 | `assets/site.css`, `assets/site.js` | Shared shell (header, footer, buttons, prose layout) and behaviour (mobile menu, gap toggle) for the interior pages. The homepage keeps its own inline CSS/JS. |
 | `robots.txt` | Blocks search engines from indexing the *staging* copy. **Remove or replace before public launch.** |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is, no Jekyll processing. |
 | `BLOCKED-ITEMS.md` | Numbered decisions needed from the EO before this can go from prototype to real site. |
 | `README.md` | This file. |
+
+## The site collects no data itself
+
+There are no forms on this site. Everything that would have collected personal
+information hands off to a third party instead, per the Executive Officer:
+
+| What | Where it goes |
+|---|---|
+| Membership application | `https://beademolay.org/join/application/` (DeMolay International forwards to Missouri) |
+| Membership questions | `https://beademolay.org/join/#JoinForm` or `info@modemolay.org` |
+| Newsletter sign-up | Mailchimp — `https://eepurl.com/gO1-KD` |
+| Newsletter back issues | Mailchimp campaign archive |
+| Member login | `https://wiki.modemolay.org` |
+
+Keep it that way unless someone decides otherwise — it is why the site needs no privacy
+policy or parental-consent step (`BLOCKED-ITEMS.md` #2).
 
 ## Two review tools built into the prototype
 
