@@ -12,7 +12,7 @@
   --ui:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
   --radius:3px;
-  --nav-h:70px;
+  --nav-h:90px;
   --space-section:clamp(48px,9vw,80px);
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -61,7 +61,7 @@ nav.main{position:sticky;top:0;z-index:50;background:rgba(247,245,239,.94);backd
 nav.main.scrolled{background:rgba(247,245,239,.98);box-shadow:0 8px 26px -14px rgba(11,29,51,.45)}
 nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:13px;padding-bottom:13px;min-height:var(--nav-h)}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
-.brand-logo{height:46px;width:auto;flex:none;display:block}
+.brand-logo{height:64px;width:auto;flex:none;display:block}
 .navlinks{display:flex;gap:26px;font-family:var(--ui);font-weight:600;font-size:14.5px;letter-spacing:.03em}
 .navlinks a{color:var(--ink);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .18s ease,color .18s ease}
 .navlinks a:hover{border-color:var(--gold)}
@@ -194,7 +194,7 @@ footer .wrap{padding-top:56px;padding-bottom:34px}
 }
 @media (max-width:560px){
   .cardgrid,.cardgrid.two,.fgrid{grid-template-columns:1fr}
-  .brand-logo{height:38px}
+  .brand-logo{height:52px}
   .topbar .wrap{justify-content:center;gap:10px}
   .topbar>.wrap>div:first-child{flex-basis:100%;text-align:center}
   .topbar .links{justify-content:center;width:100%}
