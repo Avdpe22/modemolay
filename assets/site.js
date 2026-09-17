@@ -4,16 +4,6 @@
    review toggle. The homepage has its own inline script.
    ============================================================ */
 (function(){
-  // ---- content-gap review mode ----
-  var gt = document.getElementById('gapToggle');
-  if (gt) {
-    gt.addEventListener('click', function(){
-      var on = document.body.classList.toggle('show-gaps');
-      gt.setAttribute('aria-pressed', on);
-      gt.textContent = on ? 'Hide content gaps' : 'Show content gaps';
-    });
-  }
-
   // ---- sticky-nav shadow once the page has scrolled ----
   var nav = document.querySelector('nav.main'), ticking = false;
   function onScroll(){

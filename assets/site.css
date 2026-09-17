@@ -30,13 +30,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--ink);font-family:var(--ui);font-weight:700;padding:12px 20px;z-index:200}
 .skip:focus{left:0}
 
-/* content-gap review mode (same behaviour as the homepage) */
 .svg-sprite{position:absolute;width:0;height:0;overflow:hidden}
-.gapbar{background:#2b2417;color:#f0e2b8;font-family:var(--ui);font-size:12.5px}
-.gapbar .wrap{display:flex;gap:14px;align-items:center;justify-content:center;padding:8px 24px;flex-wrap:wrap;text-align:center}
-.gapbar button{font-family:var(--ui);font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:#2b2417;border:0;padding:6px 12px;border-radius:3px;cursor:pointer}
-body.show-gaps [data-gap]{outline:2px dashed var(--gold);outline-offset:4px;position:relative;background:rgba(201,162,39,.10)}
-body.show-gaps [data-gap]::after{content:attr(data-gap);position:absolute;top:-11px;left:0;font-family:var(--ui);font-weight:700;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:#2b2417;padding:2px 7px;border-radius:2px;z-index:5;white-space:nowrap}
 
 .topbar{background:var(--ink);color:#cfd8e4;font-family:var(--ui);font-size:12.5px;letter-spacing:.05em}
 .topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:8px;padding-bottom:8px;gap:16px;flex-wrap:wrap}
