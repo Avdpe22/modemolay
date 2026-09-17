@@ -7,8 +7,16 @@ step, no backend, no dependencies beyond two Google Fonts loaded over the networ
 `assets/site.js`. Every link on the site now resolves to a real page — anything still
 undecided is called out in `BLOCKED-ITEMS.md` and marked `data-gap` in the HTML.
 
-Before this goes anywhere near the public internet, read **`BLOCKED-ITEMS.md`** — it's
-the list of decisions the Executive Officer needs to make first.
+The look and feel (palette, type, spacing) is now **locked in** per the Executive
+Officer, and the site carries complete SEO metadata (`sitemap.xml`, `site.webmanifest`,
+Open Graph/Twitter Card tags with a real share image on every page). It is **still kept
+out of search engines and still staging-only** — see step 5 under "Deploy to GitHub
+Pages" below.
+
+Before this goes anywhere near the public internet, read **`BLOCKED-ITEMS.md`** (the
+decisions the Executive Officer needs to make) and **`LAUNCH-CHECKLIST.md`** (the
+engineering punch-list — what's done, what's gated on those decisions, and what's gated
+on DNS/launch timing). Both are untracked, local-only files — see `.gitignore`.
 
 ## What's in this folder
 
@@ -16,13 +24,20 @@ the list of decisions the Executive Officer needs to make first.
 |---|---|
 | `index.html` | Homepage. |
 | `what-is-demolay.html`, `our-beginnings.html`, `our-namesake.html`, `the-program.html`, `notable-demolays.html`, `how-to-join.html` | "The Order" content pages. |
-| `news.html`, `story-*.html` | The Mo Bull News hub and its (placeholder) posts. |
+| `news.html`, `story-*.html` | The MoBull News hub and its (placeholder) posts — see `BLOCKED-ITEMS.md` #11. |
 | `events.html`, `honors.html`, `volunteer.html`, `alumni.html`, `members.html` | Program, honors, and getting-involved pages. `events.html` is titled "The DeMolay Year" — the filename is kept so existing links still resolve. |
 | `donate.html`, `youth-protection.html` | Pages that resolve every link but are gated on a decision (see `BLOCKED-ITEMS.md`). |
-| `assets/site.css`, `assets/site.js` | Shared shell (header, footer, buttons, prose layout) and behaviour (mobile menu, gap toggle) for the interior pages. The homepage keeps its own inline CSS/JS. |
+| `assets/site.css`, `assets/site.js` | Shared shell (header, footer, buttons, prose layout) and behaviour (mobile menu, sticky-nav shadow) for the interior pages. The homepage keeps its own inline CSS/JS. |
+| `assets/photos/` | Small, optimized action photos actually used on the site (referenced from `index.html`). |
+| `assets/DI_images/` | **Full-resolution source photography, not referenced by any page.** ~390MB of raw camera exports the optimized photos above were drawn from. Flagged in `LAUNCH-CHECKLIST.md` as a repo-size question worth a decision — it doesn't need to ship inside this repo to appear on the live site. |
+| `assets/brand/` | Missouri DeMolay's official trademark source files (PDF/EPS/PNG) and the script used to derive the SVG logos at the root of `assets/`. Not linked from any page directly. |
+| `assets/og-image.jpg` | Social-share preview image (1200×630) used by every page's Open Graph/Twitter Card tags. |
+| `sitemap.xml` | Lists all public pages for search engines. Only takes effect once `robots.txt`/`noindex` come off — see below. |
+| `site.webmanifest` | Basic web app manifest (name, theme color, icons) linked from every page. |
 | `robots.txt` | Blocks search engines from indexing the *staging* copy. **Remove or replace before public launch.** |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is, no Jekyll processing. |
-| `BLOCKED-ITEMS.md` | Numbered decisions needed from the EO before this can go from prototype to real site. |
+| `BLOCKED-ITEMS.md` | Numbered decisions needed from the EO before this can go from prototype to real site. Untracked — see `.gitignore`. |
+| `LAUNCH-CHECKLIST.md` | Engineering punch-list: what's done, what's still gated on an EO decision, what's gated on DNS/launch timing. Untracked — see `.gitignore`. |
 | `README.md` | This file. |
 
 ## The site collects no data itself
@@ -41,22 +56,14 @@ information hands off to a third party instead, per the Executive Officer:
 Keep it that way unless someone decides otherwise — it is why the site needs no privacy
 policy or parental-consent step (`BLOCKED-ITEMS.md` #2).
 
-## Two review tools built into the prototype
+## Two review tools that used to be built into the prototype
 
-These are **staging-only** and both are called out in `BLOCKED-ITEMS.md` as things to
-decide before launch.
-
-1. **"Show content gaps" bar** (top of every page). Toggles a highlight + label over
-   every spot that's placeholder copy, a `#` link, or waiting on a real decision —
-   fastest way to see everything still open at a glance.
-2. **"🎨 Adjust Look" panel** (bottom-right corner). Lets a reviewer try different
-   colors, body-copy font, corner rounding, and section spacing live in the browser,
-   then hit **Copy CSS Variables** to grab the resulting values as a small CSS snippet
-   to hand to whoever finalizes the site. Choices are saved only in that browser
-   (`localStorage`) — nothing is shared or published between reviewers.
-
-Both are wrapped in HTML comments marked `PROTOTYPE REVIEW TOOL` in `index.html` so
-they're easy to strip out (or gate behind an internal flag) later.
+Earlier drafts shipped two staging-only reviewer tools — a "Show content gaps" bar on
+every page (highlighted every `data-gap` spot) and a bottom-right "🎨 Adjust Look" panel
+for trying palette/type/spacing options live. Both are now **removed**: the EO confirmed
+the look and feel is locked in, so there was nothing left for them to review (see
+`BLOCKED-ITEMS.md` #17). If you're reading old commit history and see `PROTOTYPE REVIEW
+TOOL` comments or a `modemolay-theme-prefs` localStorage key, that's what they were.
 
 ## Preview it locally
 
@@ -103,9 +110,9 @@ python3 -m http.server 8000   # then visit http://localhost:8000
    flagged in `BLOCKED-ITEMS.md` #16.
 
 6. **This link is still public.** `noindex` keeps it out of Google, but anyone with the
-   URL can open it — GitHub Pages on a public repo has no access control by default.
-   If the EO wants the prototype genuinely private during review, see `BLOCKED-ITEMS.md` #17
-   for options (private repo + GitHub Pro/Team/Enterprise, or a separate access-gated host).
+   URL can open it — GitHub Pages on a public repo has no access control by default. Per
+   `BLOCKED-ITEMS.md` #16, the EO has already decided this is acceptable during review
+   and no access gate is needed — noted here only so it isn't mistaken for an oversight.
 
 ## Updating the prototype
 
@@ -115,7 +122,8 @@ to run.
 
 ## Content gaps at a glance
 
-Every spot in `index.html` marked `data-gap="..."` is real placeholder content — use the
-"Show content gaps" toggle at the top of the page to see them all highlighted at once.
-`BLOCKED-ITEMS.md` turns that same list into a decision doc for the EO, plus a handful
-of judgment calls that aren't marked in the page itself (legal, privacy, domain, security).
+Every spot marked `data-gap="..."` in the HTML is real placeholder content. There's no
+visual toggle for these anymore (removed along with the other review tools — see above);
+search the source for `data-gap="` to find them, or just read `BLOCKED-ITEMS.md`, which
+turns that same list into a decision doc for the EO, plus a handful of judgment calls
+that aren't marked in the page itself (legal, privacy, domain, security).
