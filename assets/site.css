@@ -7,13 +7,13 @@
    ============================================================ */
 :root{
   --ink:#0B1D33;--paper:#F7F5EF;--white:#fff;--gold:#C9A227;--gold-soft:#E7D290;
-  --teal:#1799BE;--teal-deep:#0F7495;--red:#B22234;--gray:#5A6472;--line:rgba(11,29,51,.14);
+  --teal:#AC242A;--teal-deep:#AC242A;--red:#B22234;--gray:#5A6472;--line:rgba(11,29,51,.14);
   --disp:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
   --ui:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
-  --radius:3px;
+  --serif:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --radius:10px;
   --nav-h:90px;
-  --space-section:clamp(48px,9vw,80px);
+  --space-section:clamp(56px,10vw,96px);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px);-webkit-text-size-adjust:100%}
@@ -79,7 +79,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .mobilenav.open .mobilenav-inner{opacity:1;transform:none}
 .mobilenav a:not(.btn){display:flex;align-items:center;min-height:48px;padding:4px 24px;font-family:var(--ui);font-weight:600;font-size:16px;letter-spacing:.02em;color:var(--ink);text-decoration:none;border-left:3px solid transparent}
 .mobilenav a:not(.btn):hover{background:rgba(11,29,51,.04)}
-.mobilenav a:not(.btn)[aria-current="page"]{border-left-color:var(--teal-deep);background:rgba(23,153,190,.08)}
+.mobilenav a:not(.btn)[aria-current="page"]{border-left-color:var(--teal-deep);background:rgba(172,36,42,.08)}
 .mobilenav .btn{display:flex;margin:14px 24px 8px}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;font-family:var(--ui);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:11px 22px;border-radius:var(--radius);transition:transform .15s ease,background .15s ease,box-shadow .15s ease;cursor:pointer;border:0}
