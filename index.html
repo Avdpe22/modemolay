@@ -13,12 +13,20 @@
 <meta property="og:title" content="Missouri DeMolay — Where DeMolay Began">
 <meta property="og:description" content="Youth-led, adult-advised leadership for young men ages 9–21. Founded in Kansas City, 1919.">
 <meta property="og:url" content="https://www.modemolay.org/">
+<meta property="og:image" content="https://www.modemolay.org/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Missouri DeMolay">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Missouri DeMolay — Where DeMolay Began">
+<meta name="twitter:description" content="DeMolay was founded in Kansas City in 1919. Missouri DeMolay is a youth-led, adult-advised leadership fraternity for young men ages 9–21, with 23 chapters across the state.">
+<meta name="twitter:image" content="https://www.modemolay.org/assets/og-image.jpg">
 <meta name="theme-color" content="#0B1D33">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="assets/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
@@ -83,10 +91,6 @@ body.show-gaps [data-gap]::after{content:attr(data-gap);position:absolute;top:-1
 .topbar .links .social:hover{color:#fff;background:rgba(255,255,255,.12)}
 .fgrid .fsocial .social{display:inline-flex;line-height:0;color:#aebacb}
 .fgrid .fsocial .social:hover{color:var(--gold-soft);background:rgba(255,255,255,.08)}
-.sitesearch{display:flex}
-.sitesearch input{font-family:var(--ui);font-size:12.5px;padding:6px 10px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#fff;border-radius:var(--radius) 0 0 var(--radius);width:150px;max-width:100%;min-width:0}
-.sitesearch input::placeholder{color:#8a97a8}
-.sitesearch button{font-family:var(--ui);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.14);color:#fff;border:0;padding:0 14px;min-height:34px;border-radius:0 var(--radius) var(--radius) 0;cursor:pointer;flex:none}
 
 nav.main{position:sticky;top:0;z-index:50;background:rgba(247,245,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);transition:box-shadow .2s ease,background .2s ease}
 nav.main.scrolled{background:rgba(247,245,239,.98);box-shadow:0 8px 26px -14px rgba(11,29,51,.45)}
@@ -367,8 +371,6 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
   .topbar .wrap{justify-content:center;gap:10px}
   .topbar>.wrap>div:first-child{flex-basis:100%;text-align:center}
   .topbar .links{justify-content:center;width:100%}
-  .sitesearch{flex-basis:100%;margin-top:2px}
-  .sitesearch input{flex:1}
   .hero .wrap{padding-top:56px;padding-bottom:60px;gap:34px}
   .hero h1{font-size:clamp(48px,13vw,72px)}
   .hero p.lede{font-size:16.5px;margin:20px 0 26px}
@@ -418,11 +420,6 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
         <a class="social" href="https://www.youtube.com/watch?v=hnFH0mPGiRE" target="_blank" rel="noopener" aria-label="Missouri DeMolay on YouTube"><svg class="social-ic" aria-hidden="true"><use href="#ic-youtube"/></svg></a>
         <a class="social" href="https://www.snapchat.com/add/modemolay" target="_blank" rel="noopener" aria-label="Missouri DeMolay on Snapchat"><svg class="social-ic" aria-hidden="true"><use href="#ic-snapchat"/></svg></a>
       </span>
-      <form class="sitesearch" role="search" onsubmit="event.preventDefault()">
-        <label for="q" class="skip">Search this site</label>
-        <input id="q" type="search" placeholder="Search">
-        <button type="submit">Go</button>
-      </form>
     </div>
   </div>
 </div>
@@ -786,7 +783,7 @@ footer{content-visibility:auto;contain-intrinsic-size:0 600px}
     </div>
     <p class="allegiance">
       <b>Allegiance Statement.</b> This is the official website of Missouri DeMolay and acknowledges the authority and yields allegiance to DeMolay International, of which Frank S. Land was the founder.<br>
-      © 2026 Missouri DeMolay. All rights reserved. Site last updated <span data-gap="Wire to CMS publish date">August 2026</span>.
+      © 2026 Missouri DeMolay. All rights reserved.
     </p>
   </div>
 </footer>

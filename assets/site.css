@@ -52,10 +52,6 @@ body.show-gaps [data-gap]::after{content:attr(data-gap);position:absolute;top:-1
 .topbar .links .social:hover{color:#fff;background:rgba(255,255,255,.12)}
 .fgrid .fsocial .social{display:inline-flex;line-height:0;color:#aebacb}
 .fgrid .fsocial .social:hover{color:var(--gold-soft);background:rgba(255,255,255,.08)}
-.sitesearch{display:flex}
-.sitesearch input{font-family:var(--ui);font-size:12.5px;padding:6px 10px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#fff;border-radius:var(--radius) 0 0 var(--radius);width:150px;max-width:100%;min-width:0}
-.sitesearch input::placeholder{color:#8a97a8}
-.sitesearch button{font-family:var(--ui);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.14);color:#fff;border:0;padding:0 14px;min-height:34px;border-radius:0 var(--radius) var(--radius) 0;cursor:pointer;flex:none}
 
 nav.main{position:sticky;top:0;z-index:50;background:rgba(247,245,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);transition:box-shadow .2s ease,background .2s ease}
 nav.main.scrolled{background:rgba(247,245,239,.98);box-shadow:0 8px 26px -14px rgba(11,29,51,.45)}
@@ -198,8 +194,6 @@ footer .wrap{padding-top:56px;padding-bottom:34px}
   .topbar .wrap{justify-content:center;gap:10px}
   .topbar>.wrap>div:first-child{flex-basis:100%;text-align:center}
   .topbar .links{justify-content:center;width:100%}
-  .sitesearch{flex-basis:100%;margin-top:2px}
-  .sitesearch input{flex:1}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
